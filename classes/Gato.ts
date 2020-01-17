@@ -9,4 +9,8 @@ export class Gato extends Animal {
 	fazerBarulho(): string {
 		return 'Miando...';
 	}
+
+	brincar(): void {
+		console.log('gato correndo');
+	}
 }

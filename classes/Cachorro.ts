@@ -9,4 +9,8 @@ export class Cachorro extends Animal {
 	fazerBarulho(): string {
 		return 'latindo...';
 	}
+
+	brincar(): void {
+		console.log('cachorro girando');
+	}
 }

@@ -1,4 +1,6 @@
-export abstract class Animal {
+import { IAnimal } from '../Interfaces/IAnimal';
+
+export abstract class Animal implements IAnimal {
 	private name: string;
 	private idade: number;
 	protected especie: string;
@@ -32,4 +34,5 @@ export abstract class Animal {
 	}
 
 	abstract fazerBarulho(): string;
+	abstract brincar(): void;
 }
