@@ -1,6 +1,7 @@
+import { IZoologico } from '../Interfaces/IZoologico';
 import { Animal } from './Animal';
 
-export class Zoologico {
+export class Zoologico implements IZoologico {
 	private name: string;
 	private animais: Animal[] = [];
 
@@ -14,15 +15,17 @@ export class Zoologico {
 		this.name = name;
 	}
 
-	public adicionarAnimal(animal: Animal): void {
+	public adicionar(animal: Animal): void {
 		this.animais.push(animal);
 	}
 
-	public removerAnimal(indiceAnimal: number): void {
-		this.animais.splice(indiceAnimal, 1);
+	public remover(animal: Animal): void {
+		this.animais = this.animais.filter((animalList: Animal) => {
+			return animal !== animalList;
+		});
 	}
 
-	public listarAnimais(): void {
+	public listar(): void {
 		console.log('------');
 		this.animais.forEach((animal: Animal) => {
 			let infoAnimal = {
