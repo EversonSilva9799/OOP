@@ -11,12 +11,12 @@ let gato: Animal = new Gato('mané', 1);
 let cachorro: Animal = new Cachorro('zé', 2);
 let rato: Animal = new Rato('tonho', 2);
 
-zoologico.adicionarAnimal(gato);
-zoologico.adicionarAnimal(cachorro);
-zoologico.adicionarAnimal(rato);
+zoologico.adicionar(gato);
+zoologico.adicionar(cachorro);
+zoologico.adicionar(rato);
 
-zoologico.listarAnimais();
+zoologico.listar();
 
-zoologico.removerAnimal(0);
+zoologico.remover(rato);
 
-zoologico.listarAnimais();
+zoologico.listar();
